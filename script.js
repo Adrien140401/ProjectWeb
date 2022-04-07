@@ -11,8 +11,8 @@ function getInputs() {
     console.log(password);
     console.log(phone);
 
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", 'http://127.0.0.1:5500/register', true);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
-        xhr.send(`firstname=${firstname}&name=${name}&email=${email}&password=${password}&phone=${phone}`);
+    var xmlhr = new XMLHttpRequest();
+    xmlhr.open("POST", 'http://127.0.0.1:5500/register', true);
+        xmlhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+        xmlhr.send(`firstname=${firstname}&name=${name}&email=${email}&password=${password}&phone=${phone}`);
 }
