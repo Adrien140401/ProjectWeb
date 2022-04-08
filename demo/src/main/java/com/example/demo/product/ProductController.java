@@ -1,25 +1,43 @@
 package com.example.demo.product;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 @RestController
-@RequestMapping (path = "api/v1/product")
 public class ProductController {
+    @GetMapping("api/v1/product")
+    public Product getProducts() {
+        Product product = null;
 
-    private final ProductService productService;
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
 
-    @Autowired
-    public ProductController(ProductService productService) {
-        this.productService = productService;
-    }
+            Connection connection = DriverManager.getConnection(
+                    "jdbc:mysql://mysql-betterhumanity.alwaysdata.net/betterhumanity_projetweb",
+                    "263237_betterhy",
+                    "Betterhumanity11117*");
 
-    @GetMapping
-    public List<Product> getProducts(){
-        return productService.getProducts();
+            Statement stmt = connection.createStatement();
+            ResultSet resultSet = stmt.executeQuery("SELECT * FROM person;");
+            
+
+            while(resultSet.next()) {
+                //System.out.println(resultSet.getInt(1) + " " + resultSet.getString(2) + " " + resultSet.getString(3));
+                product = new Product(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3));
+
+                //connection.getClientInfo("name");
+            }
+
+            connection.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return product;
     }
 }
