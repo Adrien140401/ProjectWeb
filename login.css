@@ -234,7 +234,7 @@ section {
   font-size: 30px;
 }
 
-.underShoesTitles {
+/* .underShoesTitles {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -256,4 +256,4 @@ section {
 
 .underShoesTitles a button {
   margin-top: 40px;
-}
+} */
