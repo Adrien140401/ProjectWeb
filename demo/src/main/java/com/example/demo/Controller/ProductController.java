@@ -1,8 +1,9 @@
-package com.example.demo.product;
+package com.example.demo.Controller;
 
+
+import com.example.demo.product.Product;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +25,7 @@ public class ProductController {
                     "Betterhumanity11117*");
 
             Statement stmt = connection.createStatement();
-            ResultSet resultSet = stmt.executeQuery("SELECT * FROM person;");
+            ResultSet resultSet = stmt.executeQuery("SELECT * FROM product;");
 
             while(resultSet.next()) {
                 product = new Product(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3));
@@ -39,6 +40,9 @@ public class ProductController {
             e.printStackTrace();
         }
 
+        UserController user = new UserController();
+        //user.delete(5);
         return list;
     }
+
 }
