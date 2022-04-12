@@ -44,5 +44,4 @@ public class ProductController {
         //user.delete(5);
         return list;
     }
-
 }
