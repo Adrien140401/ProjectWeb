@@ -1,6 +1,7 @@
 package com.example.demo.Controller;
 
 
+import com.example.demo.models.User;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,11 +12,14 @@ import java.sql.*;
 @CrossOrigin(origins = "*")
 public class LoginController {
 
-    @PostMapping("/login") public @ResponseBody ResponseEntity<String> login(
+    @PostMapping("/login") public @ResponseBody ResponseEntity<User> login(
             @RequestParam String email,
             @RequestParam String password){
 
-        try{
+        int id = 0, phone = 0;
+        String userEmail = null, userPassword = null, firstname = null, name = null;
+
+        try {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             Connection connection = DriverManager.getConnection(
@@ -33,18 +37,24 @@ public class LoginController {
 
             ResultSet resultSet = preparedStatement.executeQuery();
 
-            if (!resultSet.next()){
-                System.out.println("error connection");
-                return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-            }else {
-                System.out.println("Good Connection");
-                return new ResponseEntity<>(null, HttpStatus.OK);
+            if (!resultSet.next()) return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+            else {
+                id = resultSet.getInt("id");
+                userEmail = resultSet.getString("email");
+                userPassword = resultSet.getString("password");
+                firstname = resultSet.getString("firstname");
+                name = resultSet.getString("name");
+                phone = resultSet.getInt("phone");
             }
-
-
         }catch (Exception e){
             e.printStackTrace();
         }
-        return new ResponseEntity<>(null, HttpStatus.OK);
+        return new ResponseEntity<>(new User(
+                id,
+                userEmail,
+                userPassword,
+                firstname,
+                name,
+                phone), HttpStatus.OK);
     }
 }

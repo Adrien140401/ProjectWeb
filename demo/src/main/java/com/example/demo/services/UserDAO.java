@@ -23,7 +23,7 @@ public class UserDAO {
             try (PreparedStatement st = connection.prepareStatement(sql)) {
                 st.setString(1, user.getEmail());
                 st.setString(2, user.getPassword());
-                st.setString(3, user.getFirstname());
+                st.setString(3, user.getFirstName());
                 st.setString(4, user.getName());
                 st.setInt(5, user.getPhone());
                 st.execute();
@@ -47,11 +47,10 @@ public class UserDAO {
             try (PreparedStatement st = connection.prepareStatement(sql)) {
                 st.setString(1, user.getEmail());
                 st.setString(2, user.getPassword());
-                st.setString(3, user.getFirstname());
+                st.setString(3, user.getFirstName());
                 st.setString(4, user.getName());
                 st.setInt(5, user.getPhone());
                 st.setInt(6, id);
-
                 st.execute();
             }
 

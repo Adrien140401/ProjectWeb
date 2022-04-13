@@ -9,8 +9,13 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+//GetMapping => /users{id}
+//return => * of users in json
+//json ? => User.class
+
 @RestController
 @RequestMapping("/users")
+@CrossOrigin(origins = "*")
 public class UserController {
 
     private UserDAO UserDao = new UserDAO();
@@ -21,8 +26,9 @@ public class UserController {
     }
 
     @PutMapping("/update={id}")
-    public void update(@PathVariable(value = "id") int userId ,@RequestBody User user) throws SQLException{
-        UserDao.update( userId, user);
+    public void update(@PathVariable(value = "id") int id, @RequestBody User user) throws SQLException{
+        System.out.println(id);
+        System.out.println(user);
     }
 
 
