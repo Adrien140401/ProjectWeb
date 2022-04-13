@@ -1,60 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@600;700&family=Mukta&family=Poppins:ital,wght@1,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@600;700&family=Mukta&family=Poppins:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-li, a, button {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: #edf0f1;
-    text-decoration: none;
-} 
+li,
+a,
+button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
 
 header {
-    font-family: "Montserrat";
-    background-color:#2E2E2E;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 7.2rem;
+  font-family: "Montserrat";
+  background-color: #2e2e2e;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 7.2rem;
 }
 
 .nav-links li {
-    display: inline-block;
-    padding: 0px 20px;
+  display: inline-block;
+  padding: 0px 20px;
 }
 
 .nav-links li a {
-    transition: all 0.3s ease 0s;
-    font-weight: 800;
-    font-size: 20px;
+  transition: all 0.3s ease 0s;
+  font-weight: 800;
+  font-size: 20px;
 }
 
 .nav-links li a:hover {
-    color: darkred;
+  color: silver;
 }
 
 button {
-    padding: 9px 25px;
-    background-color: #b65fad;
-    border: none;
-    border-radius: 50px;
-    transition: all 0.3s ease 0s;
+  padding: 9px 25px;
+  background-color: #b65fad;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease 0s;
 }
 
 button:hover {
-    background-color: silver;
+  background-color: silver;
 }
 
 body {
   line-height: 1.5;
-  font-family: 'Poppins', sans-serif;
-  background-color: rgb(202, 171, 212);
+  font-family: "Poppins", sans-serif;
+  background-color: whitesmoke;
 }
 .container {
   max-width: 1170px;
@@ -74,9 +77,9 @@ body {
 .footer-col {
   width: 25%;
   padding: 0 15px;
-} 
+}
 
-.footer-col h4{
+.footer-col h4 {
   font-size: 18px;
   color: #ffffff;
   text-transform: capitalize;
@@ -86,7 +89,7 @@ body {
 }
 
 .footer-col h4::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -10px;
@@ -100,80 +103,81 @@ body {
   margin-bottom: 10px;
 }
 
-.footer-col ul li a{
+.footer-col ul li a {
   font-size: 16px;
   text-transform: capitalize;
   color: #ffffff;
   text-decoration: none;
-  font-weight: 300 ;
+  font-weight: 300;
   color: #bbbbbb;
   display: block;
-  transition: all 0.3s ease ;
+  transition: all 0.3s ease;
 }
 
 .footer-col ul li a:hover {
-  color:#ffffff;
+  color: #ffffff;
   padding-left: 8px;
 }
 
-.footer-col .social-links a{
+.footer-col .social-links a {
   display: inline-block;
   height: 40px;
   width: 40px;
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(255, 255, 255, 0.2);
   margin-right: 10px;
   margin: 0 10px 10px 0;
   text-align: center;
   line-height: 40px;
   border-radius: 50%;
-  color: #ffffff; 
+  color: #ffffff;
   transition: all 0.3s ease;
 }
 
+.containerShoes {
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+  width: 100%;
+  align-items: flex-end;
+  margin-top: 2rem;
+}
+.shoe {
+  width: 100%;
+}
+.shoe,
+.nd {
+  background: linear-gradient(70deg, #b65fad, #f8f8ff);
+  width: 200px;
+  margin: 40px;
+  border-radius: 10%;
+}
+.nd {
+  width: 200px;
+  height: 100px;
+  border: whitesmoke solid 1px;
+}
 
+#text {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 25px;
+}
 
- .containerShoes {
-   display: flex;
-   padding: 5px;
-   justify-content: center;
-   width: 100%;
-   align-items: flex-end;
- }
- .shoe {
-     width: 100%;
- }
- .shoe , .nd{
-    background: linear-gradient(70deg, #b65fad, #F8F8FF);
-    width: 200px;
-    margin: 40px;
-    border-radius: 10%;
-    
+.contactShoe {
+  display: flex;
+  justify-content: center;
+}
 
-    }
-    .nd{
-        width: 200px;
-        height: 100px;
-        border: whitesmoke solid 1px;
-    }
+.contactShoe button {
+  background-color: rgb(104, 15, 77);
+  margin-bottom: 20px;
+}
 
-    #text{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        font-size: 25px;
-    }
+.contactShoe button:hover {
+  background-color: silver;
+}
 
-    .contactShoe {
-        display: flex;
-        justify-content: center;
-     
-    }
-
-    .contactShoe button {
-        background-color: rgb(104, 15, 77);
-        margin-bottom: 20px;
-    }
-   
 .titleContainer {
   display: flex;
   justify-content: center;
@@ -183,7 +187,7 @@ body {
 }
 
 .titleContainer h1 {
-    color: white;
+  color: black;
 }
 
 .underShoesTitles {
@@ -196,7 +200,7 @@ body {
 
 .underShoesTitles h1 {
   text-transform: uppercase;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", sans-serif;
   font-size: 40px;
 }
 
@@ -210,11 +214,11 @@ body {
 }
 
 .betterhumanity {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
-.betterhumanity :nth-child(n){
+.betterhumanity :nth-child(n) {
   padding: 0.3rem;
   font-weight: 800;
   font-size: 20px;
@@ -226,31 +230,39 @@ body {
   right: 20%;
 }
 
-  #searchbar{
-	margin-left: 15%;
-	padding:15px;
-	border-radius: 10px;
+#searchbar {
+  margin-top: 2rem;
+  margin-left: 15%;
+  padding: 15px;
+  border-radius: 10px;
 }
 
-input[type=text] {
-	width: 30%;
-	-webkit-transition: width 0.15s ease-in-out;
-	transition: width 0.15s ease-in-out;
+input[type="text"] {
+  width: 70%;
+  -webkit-transition: width 0.15s ease-in-out;
+  transition: width 0.15s ease-in-out;
 }
 
 /* When the input field gets focus,
 		change its width to 100% */
-input[type=text]:focus {
-	width: 70%;
+
+#list {
+  font-size: 1.5em;
 }
 
-#list{
-	font-size: 1.5em;
-	margin-left: 90px;
+.animals {
+  display: list-item;
 }
 
-.animals{
-display: list-item;	
+ol#list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-  
+.sneakers {
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
