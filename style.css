@@ -32,7 +32,7 @@ header {
 }
 
 .nav-links li a:hover {
-    color: darkred;
+    color: silver;
 }
 
 button {
@@ -44,7 +44,7 @@ button {
 }
 
 button:hover {
-    background-color: gold;
+    background-color: silver;
 }
 
 body {
