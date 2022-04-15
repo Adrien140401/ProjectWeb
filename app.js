@@ -60,4 +60,37 @@ function search_animal() {
         }
     }
 }
+console.log("fsd")
 
+let carts = document.querySelectorAll('.add-to-cart1')
+
+let product = [
+    {
+        name: 'TN GRISE',
+        tag: 'TN GRISE',
+        price: 29,
+        inCart: 0
+    }
+
+]
+
+for (let i = 0; i < carts.length; i++) {
+    carts[i].addEventListener('click', () => {
+        console.log('clicked')
+        cartNumbers();
+    })
+}
+
+function cartNumbers() {
+    let productNumber = localStorage.getItem('cartNumbers');
+    console.log(product)
+    productNumber = parseInt(productNumber);
+
+    if (productNumber) {
+        localStorage.setItem('cartNumbers', productNumber + 1);
+
+    } else {
+        localStorage.setItem('cartNumbers', 1);
+
+    }
+}

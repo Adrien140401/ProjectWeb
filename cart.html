@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CART</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="skeleton.css">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div id="notification_container">
+    </div>
+
+    <header id="header" class="header">
+        <div class="container">
+            <div class="row">
+
+                <div class="two columns u-pull-right">
+
+                    <li class="submenu">
+                        <img src="img/cart.png" id="img-cart">
+                        <div id="cart">
+                            <table id="cart-table" class="u-full-width">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Article</th>
+                                        <th>Prix</th>
+                                        <th>Qté</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="test"></tbody>
+                            </table>
+                            <a href="#" id="empty-cart" class="button u-full-width">Vider le panier</a>
+                        </div>
+
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <form id="search-item" class="search-form">
+        <input type="text" placeholder="Rechercher ...">
+    </form>
+
+    <div id="courses-list">
+
+        <h1>NOS SNEAKERS</h1>
+        <div class="courses__container"></div>
+        <div id="no_course" class="hidden">Aucun cours n'est disponible pour votre recherche</div>
+    </div>
+
+    <div class="courses__container">
+    </div>
+
+    <footer>
+    </footer>
+
+    <script src="courses.js"></script>
+    <script src="appli.js"></script>
+    <script src="search.js"></script>
+
+</body>
+
+</html>
