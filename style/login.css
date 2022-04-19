@@ -1,59 +1,60 @@
-/** @format */
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@600;700&family=Mukta&family=Poppins:ital,wght@1,300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@600;700&family=Mukta&family=Poppins:ital,wght@1,300&display=swap');
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-li,
-a,
-button {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  color: #edf0f1;
-  text-decoration: none;
-}
+li, a, button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+} 
 
 header {
-  background-color: #24262b;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 10%;
+    background-color: #24262b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
 }
 
 .nav-links li {
-  display: inline-block;
-  padding: 0px 20px;
+    display: inline-block;
+    padding: 0px 20px;
 }
 
 .nav-links li a {
-  transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
 }
 
 .nav-links li a:hover {
-  color: darkred;
+    color: silver;
+}
+
+.btnregister {
+  display: flex;
 }
 
 button {
-  padding: 9px 25px;
-  background-color: #e91e63;
-  border: none;
-  border-radius: 50px;
-  transition: all 0.3s ease 0s;
+    padding: 9px 25px;
+    background-color: #e91e63;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+    margin-top: 2rem;
 }
 
 button:hover {
-  background-color: gold;
+    background-color: silver;
 }
 
 body {
   line-height: 1.5;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .container {
@@ -74,9 +75,9 @@ body {
 .footer-col {
   width: 25%;
   padding: 0 15px;
-}
+} 
 
-.footer-col h4 {
+.footer-col h4{
   font-size: 18px;
   color: #ffffff;
   text-transform: capitalize;
@@ -86,7 +87,7 @@ body {
 }
 
 .footer-col h4::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: -10px;
@@ -100,135 +101,136 @@ body {
   margin-bottom: 10px;
 }
 
-.footer-col ul li a {
+.footer-col ul li a{
   font-size: 16px;
   text-transform: capitalize;
   color: #ffffff;
   text-decoration: none;
-  font-weight: 300;
+  font-weight: 300 ;
   color: #bbbbbb;
   display: block;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease ;
 }
 
 .footer-col ul li a:hover {
-  color: #ffffff;
+  color:#ffffff;
   padding-left: 8px;
 }
 
-.footer-col .social-links a {
+.footer-col .social-links a{
   display: inline-block;
   height: 40px;
   width: 40px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255,255,255,0.2);
   margin-right: 10px;
   margin: 0 10px 10px 0;
   text-align: center;
   line-height: 40px;
   border-radius: 50%;
-  color: #ffffff;
+  color: #ffffff; 
   transition: all 0.3s ease;
 }
 
 section {
   padding: 70px 10%;
-}
+ }
 
-.containerRegister {
-  margin: 35%;
-  height: 600px;
-  margin-top: 50px;
-  border-radius: 20px;
-  background: linear-gradient(70deg, #c0c0c0, #f8f8ff);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+ .containerRegister {
+   margin: 35%;
+   height: 600px;
+   margin-top: 50px;
+   border-radius: 20px;
+   background: linear-gradient(70deg, #C0C0C0, #F8F8FF);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
 
-.registerinputs {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
+ .registerinputs {
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+ }
 
-.firstname {
-  padding-left: 10px;
-  padding-right: 10px;
-  transition: all 0.2s ease-in-out;
-  border: none;
-  outline: transparent;
-  width: 250px;
-  height: 30px;
-  border-radius: 20px;
-  font-family: "Poppins", sans-serif;
+ .firstname {
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: all 0.2s ease-in-out;
+    border: none;
+    outline: transparent;
+    width: 250px;
+    height: 30px;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .name {
-  padding-left: 10px;
-  padding-right: 10px;
-  transition: all 0.2s ease-in-out;
-  border: none;
-  outline: transparent;
-  width: 250px;
-  height: 30px;
-  border-radius: 20px;
-  font-family: "Poppins", sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: all 0.2s ease-in-out;
+    border: none;
+    outline: transparent;
+    width: 250px;
+    height: 30px;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
-.email {
-  padding-left: 10px;
-  padding-right: 10px;
-  border: none;
-  transition: all 0.2s ease-in-out;
-  outline: transparent;
-  width: 250px;
-  height: 30px;
-  border-radius: 20px;
-  font-family: "Poppins", sans-serif;
-}
+ .email {
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    outline: transparent;
+    width: 250px;
+    height: 30px;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+ }
 
-.password {
-  padding-left: 10px;
-  padding-right: 10px;
-  transition: all 0.2s ease-in-out;
-  border: none;
-  outline: transparent;
-  width: 250px;
-  height: 30px;
-  border-radius: 20px;
-  font-family: "Poppins", sans-serif;
+ .password {
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: all 0.2s ease-in-out;
+    border: none;
+    outline: transparent;
+    width: 250px;
+    height: 30px;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 2rem;
 }
 
 .phone {
-  padding-left: 10px;
-  padding-right: 10px;
-  transition: all 0.2s ease-in-out;
-  border: none;
-  outline: transparent;
-  width: 250px;
-  height: 30px;
-  border-radius: 20px;
-  font-family: "Poppins", sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: all 0.2s ease-in-out;
+    border: none;
+    outline: transparent;
+    width: 250px;
+    height: 30px;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .firstname:focus {
-  outline: 2px solid #e91e63;
+    outline: 2px solid #e91e63;
 }
 
 .name:focus {
-  outline: 2px solid #e91e63;
+    outline: 2px solid #e91e63;
 }
 
 .password:focus {
-  outline: 2px solid #e91e63;
+    outline: 2px solid #e91e63;
 }
 
 .email:focus {
-  outline: 2px solid #e91e63;
+    outline: 2px solid #e91e63;
 }
 
 .phone:focus {
-  outline: 2px solid #e91e63;
+    outline: 2px solid #e91e63;
 }
 
 .titleContainer {
@@ -236,6 +238,13 @@ section {
   justify-content: center;
   text-transform: uppercase;
   font-size: 30px;
+}
+
+.containerLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
 }
 
 /* .underShoesTitles {
