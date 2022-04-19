@@ -5,8 +5,8 @@
     <title>Better Humanity</title>
     <meta name="viewport" content="width-device-width, initial-scale=1">
     <link rel="stylesheet" href="/style/login.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="app.js" charset="utf-8"></script>
   </head>
   <body>
 
@@ -27,18 +27,15 @@
 
     <section class="main">
         <div class="titleContainer">
-            <h1>CONNECTEZ-VOUS</h1>
+            <h1>PROFIL</h1>
+            <input id="email" placeholder="example@test.fr">
+            <input id="password" placeholder="*******">
+            <input id="firstName" placeholder="firstName">
+            <input id="name" placeholder="name">
+            <input id="phone" placeholder="0669604479">
         </div>
-        <div class="containerLogin" style="margin-bottom: 50px;">
-            <div class="logininputs">
-                <h1 class="logologin" style="margin-bottom: 20px;">BETTER HUMANITY</h1>
-                <input type="text" class="email" placeholder="example@mail.com..">
-                <br>
-                <input type="text" class="password" placeholder="Votre mot de passe..">
-                <br>
-                <a class="btnlogin" href="#"><button>Connexion</button></a>
-            </div>
-        </div>
+        <button onclick="update()">UPDATE ACCOUNT</button>
+        <button onclick="suppr()">DELETE ACCOUNT</button>
     </section>
 
         <div class="footer">
@@ -82,7 +79,6 @@
             </div>
         </div>
     </footer>
-
-  </body> 
-     <script src="/script/app.js" ></script>
+    <script src="/script/profil.js"></script>
+  </body>
 </html>
